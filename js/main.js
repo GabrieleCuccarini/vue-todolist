@@ -6,13 +6,13 @@ createApp({
         toDoList: [
                 {
                 text: "Fare l'esercizio",
-                done: "false"
+                done: false
                 }, {
                 text: "Committare",
-                done: "false"
+                done: false
                 }, {
                 text: "Pushare",
-                done: "false"
+                done: false
                 }
             ],
             textDeco: "text-decoration-line-through"

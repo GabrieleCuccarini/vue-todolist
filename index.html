@@ -19,7 +19,7 @@
         
         <div class="container d-flex flex-column mt-5">
             <div v-for="(item, i) in toDoList" 
-            :class="(item.done === false) ? 'text-decoration-line-through' : ''">
+            :class="(item.done === true) ? 'text-decoration-line-through' : ''">
                 {{item.text}}
             </div>
             <!-- <div class="item">
