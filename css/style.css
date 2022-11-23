@@ -1,0 +1,9 @@
+.green {
+    color: green;
+    background-color: lightgreen;
+}
+
+.container > * {
+    border: 1px solid gray;   
+    padding-left: 3rem;
+}

@@ -12,10 +12,15 @@ createApp({
                 done: false
                 }, {
                 text: "Pushare",
-                done: false
+                done: true
                 }
             ],
             textDeco: "text-decoration-line-through"
+        }
+    },
+    methods: {
+        eliminateItem(indexDelete) {
+            this.toDoList.splice(indexDelete, 1);
         }
     }
 }).mount("#app")
