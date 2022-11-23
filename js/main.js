@@ -31,7 +31,6 @@ createApp({
     methods: {
         eliminateItem(index) {
             this.toDoList.splice(index, 1);
-            debugger
         },
         buttonSubmit() {
             this.toDoList.push({
