@@ -17,30 +17,21 @@
 
     <div id="app">
         
-        <div class="container mt-5" style="width: 500px">
+        <form class="container mt-5" @submit.prevent="buttonSubmit" style="width: 500px">
             <div class="d-flex mb-2">
-                <label for="inputPassword2" class="sr-only">Password</label>
-                <input type="text" class="form-control" placeholder="Aggiungi una task">
+                <input type="text" class="form-control" placeholder="Aggiungi una task" v-model="newToDoList.text">
                 <button type="submit" class="btn btn-primary">Aggiungi</button>
             </div>
-        </div>
+        </form>
 
 
         <div class="container d-flex flex-column mt-2">
             <div v-for="(item, i) in toDoList" class="d-flex justify-content-between my-2 align-items-center"
             :class="(item.done === true) ? 'text-decoration-line-through green' : 'bg-warning'">
                 <span>{{item.text}}</span>
-                <button class="btn btn-danger px-5" @click="eliminateItem"><i class="fa-solid fa-trash"></i></button>
+                <button class="btn btn-danger px-5" @click="eliminateItem(i)"><i class="fa-solid fa-trash"></i></button>
             </div>
-            <!-- <div class="item">
-                {{toDoList[0].text}}
-            </div>
-            <div class="item">
-                {{toDoList[1].text}}
-            </div>
-            <div class="item">
-                {{toDoList[2].text}}
-            </div> -->
+            <!-- :class=" {'text-decoration-none':item.done, 'text-primary': !item.done, 'text-light': item.done} "-->
         </div>
 
     </div>

@@ -13,17 +13,32 @@ createApp({
                 }, {
                 text: "Pushare",
                 done: true
+                },
+                {
+                text: "Cenare",
+                done: false
+                },
+                {
+                text: "Andare a dormire",
+                done: true
                 }
             ],
             newToDoList: {
                 text: "",
-                done: "false"
             }
         }
     },
     methods: {
-        eliminateItem(indexDelete) {
-            this.toDoList.splice(indexDelete, 1);
+        eliminateItem(index) {
+            this.toDoList.splice(index, 1);
+            debugger
+        },
+        buttonSubmit() {
+            this.toDoList.push({
+                text: this.newToDoList.text,
+                done: false
+            })
+            this.newToDoList.text = ""
         }
     }
 }).mount("#app")
