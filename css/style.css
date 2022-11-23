@@ -3,7 +3,7 @@
     background-color: lightgreen;
 }
 
-.container > * {
+.container.flex-column > * {
     border: 1px solid gray;   
     padding-left: 3rem;
 }

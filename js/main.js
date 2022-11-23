@@ -15,7 +15,10 @@ createApp({
                 done: true
                 }
             ],
-            textDeco: "text-decoration-line-through"
+            newToDoList: {
+                text: "",
+                done: "false"
+            }
         }
     },
     methods: {
