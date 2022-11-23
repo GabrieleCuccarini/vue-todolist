@@ -14,9 +14,8 @@ createApp({
                 text: "Pushare",
                 done: "false"
                 }
-            ]
+            ],
+            textDeco: "text-decoration-line-through"
         }
     }
 }).mount("#app")
-
-console.log(toDoList);
